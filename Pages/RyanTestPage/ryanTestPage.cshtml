@@ -3,7 +3,108 @@
     ViewData["Title"] = "Ryan's Place";
     
 }
-<h1>@ViewData["Title"]</h1>
+<style>
+    body{
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-<p>Yeah it works 😎</p>
-Hello test
+.container{
+    border-radius: 20px;
+    width: 50rem;
+    height: 50%;
+    display: flex;
+    gap: 8px;
+}
+
+.left-container, .right-container{
+    flex: 1;
+    border-radius: 20px;
+    background-color: rgb(230, 230, 230);
+}
+
+.left-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px;
+}
+
+#right-container-caption{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -40px;
+}
+
+.btn-container{
+    display: flex;
+    gap: 20px;
+}
+
+#sign-up-btn, #log-in-btn{
+    display: flex; justify-content: center; align-items: center;
+    background-color: rgb(67, 125, 226);
+    height: 40px;
+    width: 170px;
+    font-size: 16px;
+    transition: 0.1s;
+    border-radius: 5px;
+    color: white;
+}
+
+#sign-up-btn:hover, #log-in-btn:hover{
+    background-color: rgb(48, 88, 158);
+    color: white;
+    cursor:pointer;
+    transition: 0.1s;
+}
+
+#username, #password{
+    width: 90%;
+    height: 10%;
+    display: flex; justify-content: left; align-items: center;
+    padding-left: 10px;
+}
+
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration & Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            *LOGO HERE*
+        </div>
+        <div class="right-container">
+            <h2>Welcome to Kritik</h2>
+            <p id="right-container-caption">Login or Signup to become a Kritik!</p>
+               <input text="Username" placeholder="Username" id="username">
+               <input text="password" placeholder="Password" id="password">
+               <div class="btn-container">
+                    <btn id="log-in-btn">Log In</btn>
+                    <btn id="sign-up-btn">Sign Up</btn>
+               </div>
+        </div>
+    </div>
+</body>
+</html>
